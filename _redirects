@@ -1,2 +1,6 @@
+/index.html / 301!
 / https://a-single-html-file.netlify.app/ 200!
-/dir https://a-single-html-file.netlify.app/ 200!
+
+/dir /dir/ 301!
+/dir/index.html /dir/ 301!
+/dir/ https://a-single-html-file.netlify.app/ 200!
