@@ -5,7 +5,9 @@
 ## TL;DR
 
 * [Trailing slashes are added as expected and documented on Netlify](https://docs.netlify.com/routing/redirects/redirect-options/#trailing-slash) _EXCEPT_ when a Rewrite rule is in play. If a `200!` Rewrite rule is applied to the URL, the trailing slash redirect does not apply.
-* `index.html` requests must have a separate entry in your `_redirects` file and handled manually. It would be better if `/index.html` was normalized to `/` (in my opinion).
+	* 🚨 `_redirects` file entry `/redirect /dir/ 200!` does not add the trailing slash as expected when `/redirect` is requested. I believe it _should_ 301 to `/redirect/`.
+	* Is this quirk being relied on in production to workaround the trailing slash normalization? See https://flaviocopes.com/netlify-fix-trailing-slash-rewrite/
+* _Optional:_ `index.html` requests must have a separate entry in your `_redirects` file and handled manually. It would be better if `/index.html` was normalized to `/` for the developer.
 
 ## First test
 
