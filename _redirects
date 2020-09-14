@@ -3,3 +3,6 @@
 
 /dir/index.html /dir/ 301!
 /dir/ https://a-single-html-file.netlify.app/ 200!
+
+/localredirect/index.html /localredirect/ 301!
+/localredirect/ /localdir/ 200!
